@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'payments',
     'maps',
     'rest_framework',
+    'rest_framework_simplejwt',
     'corsheaders'
 ]
 
@@ -144,3 +145,9 @@ CORS_ALLOW_HEADERS = [
     'content-type',
     'authorization',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
